@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-epilogue: 'Epilogue', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Caribe Erudito Palette - Light Mode (Fondo Blanco Prioritario & Máxima Legibilidad) */
+    --color-bg: #ffffff;
+    --color-surface: #fcf9f5;
+    --color-surface-container: #f0edea;
+    --color-surface-low: #f6f3ef;
+    --color-surface-card: #ffffff;
+    --color-on-surface: #0f172a;
+    --color-on-surface-variant: #334155;
+    --color-outline: #64748b;
+    --color-outline-variant: #e2e8f0;
+    --color-border: #e2e8f0;
+
+    /* Primarios & Acentos Caribe Erudito */
+    --color-primary: #b30006;
+    --color-primary-container: #d9251d;
+    --color-primary-fixed: #ffdad5;
+    --color-secondary: #2c657b;
+    --color-secondary-container: #aee5fe;
+    --color-secondary-fixed: #bce9ff;
+    --color-tertiary: #006534;
+    --color-tertiary-container: #008144;
+    --color-tertiary-fixed: #87faaa;
+    --color-accent-sun: #f6b800;
+  }
+
+  .dark {
+    /* Caribe Erudito Palette - Dark Mode (Fondo Negro & Alto Contraste) */
+    --color-bg: #121212;
+    --color-surface: #181816;
+    --color-surface-container: #22221f;
+    --color-surface-low: #1c1c19;
+    --color-surface-card: #1e1e1b;
+    --color-on-surface: #ffffff;
+    --color-on-surface-variant: #cbd5e1;
+    --color-outline: #94a3b8;
+    --color-outline-variant: #334155;
+    --color-border: #332f2c;
+
+    /* Primarios & Acentos en Dark Mode */
+    --color-primary: #ffb4a9;
+    --color-primary-container: #d9251d;
+    --color-primary-fixed: #930004;
+    --color-secondary: #98cee7;
+    --color-secondary-container: #0a4d62;
+    --color-secondary-fixed: #2c657b;
+    --color-tertiary: #6bdd90;
+    --color-tertiary-container: #006534;
+    --color-tertiary-fixed: #005229;
+    --color-accent-sun: #f6b800;
+  }
+
+  body {
+    font-family: var(--font-epilogue);
+    background-color: var(--color-bg);
+    color: var(--color-on-surface);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-headline {
+    font-family: var(--font-epilogue);
+    letter-spacing: -0.02em;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Subtle contact shadow & elevated tactile layering (Caribe Erudito) */
+.shadow-caribe-sm {
+  box-shadow: 0px 2px 8px rgba(8, 76, 97, 0.06);
+}
+
+.shadow-caribe-md {
+  box-shadow: 0px 6px 20px rgba(8, 76, 97, 0.10);
+}
+
+.shadow-caribe-hard {
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.dark .shadow-caribe-hard {
+  box-shadow: 4px 4px 0px #000000;
+}
+
+/* Subtle academic paper texture / dot rhythm */
+.bg-caribe-pattern {
+  background-color: #ffffff;
+  background-image: radial-gradient(#2c657b 0.5px, transparent 0.5px);
+  background-size: 28px 28px;
+}
+
+.dark .bg-caribe-pattern {
+  background-color: #121212;
+  background-image: radial-gradient(#aee5fe 0.35px, transparent 0.35px);
+  background-size: 28px 28px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fcf9f5;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e6bdb7;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #3d2c29;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d9251d;
+}
